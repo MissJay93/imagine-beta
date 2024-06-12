@@ -10,6 +10,8 @@ let username = 'missjay';
 let age = 101;
 let present = false;
 
+
+
 //objects
 const person = {
     username: 'missjay',
@@ -98,4 +100,86 @@ Math.max(34,32,37);
 2 * (3+ 4) - 5 / 2;
 Number('2') + 2
 
+//Strings in JavaScript
+//Concatenation
+
+
+const firstname = 'Josephine';
+const middlename = 'Akua';
+const lastname = 'Declan';
+firstname + ' ' + middlename + ' ' + lastname;
+//Template literal
+`${firstname} ${middlename} ${lastname}`;
+
+
+// Write a function that will take a user with firstname, lastname and return fullname;
+
+function fullName(user) {
+  return {
+    ...user,
+    fullName:  `${user.firstname} ${user.lastname}`
+  };
+  // return user.firstname + ' ' + user.lastname;
+}
+
+const user = {
+  firstname: 'Josephine',
+  lastname: 'Declan'
+}
+fullName(user);
+
+
+// Array map
+
+const users = [
+  {firstname: 'Josephine', lastname: 'Declan'},
+  {firstname: 'Big', lastname:'Jerry'},
+  {firstname: 'Cristopher' , lastname: 'Katonga'},
+  {firstname: 'Jehu', lastname: 'Amoah'},
+  {firstname: 'Joseph', lastname: 'Asiedu'}, 
+];
+
+// users.map(fullName);
+
+// Square of numbers
+function square(number){
+  return number **2;
+}
+square(7);
+const numbers = [9,8,7,6];
+numbers.map(square);
+
+//Array filter
+function isEven(number){
+  return number % 2 ===0;
+}
+isEven(6);
+numbers.filter(isEven);
+
+
+//Write a function that will allow a user to reset their password
+const user = {
+  email: 'josephinedeclann@gmail.com',
+  password: '1234'
+}
+
+function resetPassword(email, newPassword){
+// check if email and new password was provided
+  if (!email || !newPassword) {
+   return 'Email or password not provided';
+ }
+//check if provided email is correct
+if (email !== user.email) {
+  return 'Incorrect email';
+}
+  // Update password withnew one 
+   user.password = newPassword;
+ return 'Password reset successful';
+}
+
+user;
+resetPassword('josephinedeclann@gmail.com','1234');
+user;
+
+//objects in JavaSript
 
